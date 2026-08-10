@@ -27,7 +27,6 @@ export default function Navbar() {
           className="flex items-center gap-1.5 font-display text-lg font-bold tracking-tight text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent rounded-sm px-1 py-0.5"
         >
           <span>OctoTech</span>
-          <span className="w-2 h-2 rounded-full bg-accent" aria-hidden="true" />
         </Link>
 
         {/* Desktop Links */}

@@ -41,7 +41,6 @@ export default function Footer() {
         <div className="space-y-3">
           <div className="flex items-center gap-1.5 font-display text-base font-bold tracking-tight text-ink">
             <span>OctoTech</span>
-            <span className="w-1.5 h-1.5 rounded-full bg-accent" />
           </div>
           <p className="text-sm font-mono text-slate max-w-sm leading-snug">
             Founded in Auckland, NZ & Lilongwe, MW by Founder Telly Paul and Technical Lead Destiny Mwafulirwa. Delivering software platforms, mobile applications, databases, and secure network infrastructure.
