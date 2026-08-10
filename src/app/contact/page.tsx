@@ -2,7 +2,7 @@
 
 import { Suspense, useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { ShieldAlert, ArrowUpRight, CheckCircle2, AlertTriangle, Send } from 'lucide-react';
+import { ShieldAlert, ArrowUpRight, CheckCircle2, AlertTriangle } from 'lucide-react';
 
 const Github = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
@@ -234,19 +234,11 @@ function ContactFormContent() {
           </p>
 
           <div className="space-y-3 pt-2">
-            <div className="flex items-center justify-between p-3 border border-hairline bg-white text-sm text-slate">
-              <div className="flex items-center gap-2.5">
-                <Send className="w-4 h-4 text-accent" />
-                <span className="font-mono">Direct Endpoint: Formspree Route</span>
-              </div>
-              <span className="w-2 h-2 rounded-full bg-green-500" />
-            </div>
-
             <a
               href="https://github.com/DestinyAzriel"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between p-3 border border-hairline bg-white hover:border-accent transition-colors text-sm text-slate hover:text-ink focus-ring"
+              className="flex items-center justify-between p-3.5 border border-hairline bg-white hover:border-accent transition-colors text-sm text-slate hover:text-ink focus-ring"
             >
               <div className="flex items-center gap-2.5">
                 <Github className="w-4 h-4 text-accent" />
@@ -259,7 +251,7 @@ function ContactFormContent() {
               href="https://octovvpn.net"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between p-3 border border-hairline bg-white hover:border-accent transition-colors text-sm text-slate hover:text-ink focus-ring"
+              className="flex items-center justify-between p-3.5 border border-hairline bg-white hover:border-accent transition-colors text-sm text-slate hover:text-ink focus-ring"
             >
               <div className="flex items-center gap-2.5">
                 <ShieldAlert className="w-4 h-4 text-accent" />
