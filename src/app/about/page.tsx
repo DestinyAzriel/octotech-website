@@ -1,0 +1,163 @@
+import Link from 'next/link';
+import { User, MapPin, Compass, Briefcase, FileCode2, ArrowRight } from 'lucide-react';
+import ConversionCTA from '@/components/ConversionCTA';
+
+export default function AboutPage() {
+  return (
+    <div className="w-full flex flex-col">
+      {/* Page Header */}
+      <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-b border-hairline">
+        <div className="max-w-3xl space-y-4">
+          <span className="font-mono text-sm tracking-widest text-accent uppercase font-bold">About Us</span>
+          <h1 className="font-display text-4xl sm:text-5xl font-bold tracking-tight text-ink">
+            Founder-led execution. Two countries.
+          </h1>
+          <p className="text-lg sm:text-xl text-slate leading-snug">
+            OctoTech was founded by Telly Paul, working alongside Technical Lead Destiny Mwafulirwa. We take on client work — web apps, mobile apps, infrastructure, automation — and we build our own products alongside it. As the work grows, so will the team.
+          </p>
+        </div>
+      </section>
+
+      {/* Leadership Section */}
+      <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-b border-hairline">
+        <div className="space-y-4 mb-12">
+          <span className="font-mono text-sm tracking-widest text-accent uppercase font-bold">Leadership</span>
+          <h2 className="font-display text-3xl font-bold text-ink">Who We Are</h2>
+          <p className="text-slate max-w-xl text-base leading-snug">
+            We are hands-on builders, not remote executives. Your project is shaped, scoped, and coded directly by us.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          {/* Telly Paul - FIRST */}
+          <div className="p-8 border border-hairline bg-[#FAFAF7] space-y-6">
+            <div className="flex items-start justify-between">
+              <div className="space-y-1.5">
+                <span className="font-mono text-xs tracking-wider text-accent uppercase font-bold">FOUNDER & FRONTEND</span>
+                <h3 className="font-display text-2xl font-bold text-ink">Telly Paul</h3>
+                <span className="font-mono text-sm text-slate font-semibold block">Founder</span>
+              </div>
+              <div className="p-2.5 bg-ink/5 border border-hairline text-slate">
+                <Briefcase className="w-6 h-6 text-accent" />
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2 text-xs font-mono text-slate bg-ink/5 px-3 py-1.5 rounded-sm w-fit">
+              <MapPin className="w-4 h-4 text-accent" />
+              <span>Auckland, New Zealand</span>
+            </div>
+
+            <div className="text-base text-slate space-y-4 leading-snug">
+              <p>
+                Telly leads business development, client engagement, product scoping, and frontend engineering across web and mobile platforms.
+              </p>
+              <p>
+                Telly bridges commercial requirements and technical execution, translating complex client workflows into clean user-experience layouts. Telly specializes in Flutter application structure and Next.js reactive portals, ensuring code is visually refined and keyboard-accessible.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap gap-2 text-[11px] font-mono text-slate/70 border-t border-hairline/60 pt-4">
+              <span>#nextjs-react</span>
+              <span>#flutter-ui</span>
+              <span>#product-scoping</span>
+              <span>#accessibility</span>
+            </div>
+          </div>
+
+          {/* Destiny Mwafulirwa - SECOND */}
+          <div className="p-8 border border-hairline bg-[#FAFAF7] space-y-6">
+            <div className="flex items-start justify-between">
+              <div className="space-y-1.5">
+                <span className="font-mono text-xs tracking-wider text-accent uppercase font-bold">TECHNICAL LEADERSHIP</span>
+                <h3 className="font-display text-2xl font-bold text-ink">Destiny Mwafulirwa</h3>
+                <span className="font-mono text-sm text-slate font-semibold block">Technical Lead</span>
+              </div>
+              <div className="p-2.5 bg-ink/5 border border-hairline text-slate">
+                <FileCode2 className="w-6 h-6 text-accent" />
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2 text-xs font-mono text-slate bg-ink/5 px-3 py-1.5 rounded-sm w-fit">
+              <MapPin className="w-4 h-4 text-accent" />
+              <span>Lilongwe, Malawi</span>
+            </div>
+
+            <div className="text-base text-slate space-y-4 leading-snug">
+              <p>
+                Destiny serves as Technical Lead, directing system operations, networking architectures, database engines, and secure tunnels behind our products.
+              </p>
+              <p>
+                With a track record of developing large-scale systems, Destiny previously designed and deployed a municipal traffic management platform. This real-world experience in high-concurrency traffic routing informs how OctoTech architectures handle data integrity, queuing, and server failovers today.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap gap-2 text-[11px] font-mono text-slate/70 border-t border-hairline/60 pt-4">
+              <span>#linux-sysops</span>
+              <span>#networking</span>
+              <span>#postgresql</span>
+              <span>#vpn-transports</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Roadmap Section */}
+      <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-slate/5">
+        <div className="space-y-4 mb-12">
+          <span className="font-mono text-sm tracking-widest text-accent uppercase font-bold">Roadmap</span>
+          <h2 className="font-display text-3xl font-bold text-ink">Our Growth Path</h2>
+          <p className="text-slate max-w-xl text-base leading-snug">
+            We believe in honest capacity reporting. Here is how we plan to grow our operational scale as client commitments increase.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Phase 1 */}
+          <div className="p-6 border border-accent bg-[#FAFAF7] relative space-y-4">
+            <div className="absolute top-4 right-4 px-2 py-0.5 text-[11px] uppercase tracking-wider font-bold bg-accent/20 text-ink border border-accent/30 font-mono">
+              Current State
+            </div>
+            <div className="space-y-1">
+              <span className="font-mono text-xs text-slate/60">PHASE 01</span>
+              <h3 className="font-display font-bold text-lg text-ink">Leadership Core</h3>
+            </div>
+            <p className="text-sm text-slate leading-snug">
+              Telly Paul and Destiny Mwafulirwa personally direct all client deliverables and manage the core codebase of OctoVVPN and OctoPay, maintaining zero-overhead execution.
+            </p>
+          </div>
+
+          {/* Phase 2 */}
+          <div className="p-6 border border-hairline bg-[#FAFAF7] space-y-4">
+            <div className="space-y-1">
+              <span className="font-mono text-xs text-slate/60">PHASE 02</span>
+              <h3 className="font-display font-bold text-lg text-ink">Sub-contractor Network</h3>
+            </div>
+            <p className="text-sm text-slate leading-snug">
+              Bringing in vetted contract developers in both Auckland and Lilongwe to support frontend builds (React/Flutter) and secondary scripting, under core leadership supervision.
+            </p>
+          </div>
+
+          {/* Phase 3 */}
+          <div className="p-6 border border-hairline bg-[#FAFAF7] space-y-4">
+            <div className="space-y-1">
+              <span className="font-mono text-xs text-slate/60">PHASE 03</span>
+              <h3 className="font-display font-bold text-lg text-ink">Physical Studios</h3>
+            </div>
+            <p className="text-sm text-slate leading-snug">
+              Establishing physical co-working spaces in Lilongwe and Auckland, enabling 24-hour maintenance coverage and a team of full-time engineering specialists.
+            </p>
+          </div>
+        </div>
+
+        {/* Bottom Contact Bridge */}
+        <div className="mt-12 flex justify-end">
+          <Link href="/contact" className="inline-flex items-center gap-2 text-sm font-mono tracking-wider uppercase text-ink hover:text-accent font-semibold transition-colors">
+            Start a project <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </section>
+
+      <ConversionCTA />
+    </div>
+  );
+}
