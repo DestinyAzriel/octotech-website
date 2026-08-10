@@ -1,6 +1,40 @@
+'use client';
+
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 export default function Footer() {
+  const [mounted, setMounted] = useState(false);
+  const [times, setTimes] = useState({ lilongwe: '', auckland: '' });
+
+  useEffect(() => {
+    setMounted(true);
+    const updateTimes = () => {
+      try {
+        const timeFormatter = (timeZone: string) => {
+          return new Intl.DateTimeFormat('en-GB', {
+            timeZone,
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false,
+          }).format(new Date());
+        };
+
+        setTimes({
+          lilongwe: timeFormatter('Africa/Blantyre'),
+          auckland: timeFormatter('Pacific/Auckland'),
+        });
+      } catch {
+        // Silently fallback if DateTimeFormat fails
+      }
+    };
+
+    updateTimes();
+    const interval = setInterval(updateTimes, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <footer className="w-full bg-[#FAFAF7] border-t border-hairline py-12 px-4 sm:px-6 lg:px-8 mt-auto">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
@@ -36,15 +70,36 @@ export default function Footer() {
           <Link href="/contact" className="text-sm font-mono tracking-wider text-slate hover:text-ink transition-colors">
             CONTACT
           </Link>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-sm font-mono tracking-wider text-slate hover:text-ink transition-colors">
+          <a href="https://github.com/DestinyAzriel" target="_blank" rel="noopener noreferrer" className="text-sm font-mono tracking-wider text-slate hover:text-ink transition-colors">
             GITHUB
           </a>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto border-t border-hairline mt-8 pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs font-mono text-slate/80">
+      <div className="max-w-7xl mx-auto border-t border-hairline mt-8 pt-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-[11px] font-mono text-slate/70">
         <span>© {new Date().getFullYear()} OctoTech Ltd. All rights reserved.</span>
-        <span>Auckland, NZ & Lilongwe, MW</span>
+
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-slate/70">
+          <div className="flex items-center gap-1.5">
+            <span className="relative flex h-1.5 w-1.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-accent"></span>
+            </span>
+            <span>Auckland, NZ</span>
+            <span className="text-slate/90 font-medium">{mounted ? `${times.auckland} NZST/NZDT` : '--:--:--'}</span>
+          </div>
+
+          <span className="text-hairline">|</span>
+
+          <div className="flex items-center gap-1.5">
+            <span className="relative flex h-1.5 w-1.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-accent"></span>
+            </span>
+            <span>Lilongwe, MW</span>
+            <span className="text-slate/90 font-medium">{mounted ? `${times.lilongwe} CAT` : '--:--:--'}</span>
+          </div>
+        </div>
       </div>
     </footer>
   );

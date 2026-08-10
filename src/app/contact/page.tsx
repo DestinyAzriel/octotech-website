@@ -243,14 +243,14 @@ function ContactFormContent() {
             </div>
 
             <a
-              href="https://github.com"
+              href="https://github.com/DestinyAzriel"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-between p-3 border border-hairline bg-white hover:border-accent transition-colors text-sm text-slate hover:text-ink focus-ring"
             >
               <div className="flex items-center gap-2.5">
                 <Github className="w-4 h-4 text-accent" />
-                <span className="font-mono">github.com/octotech</span>
+                <span className="font-mono">github.com/DestinyAzriel</span>
               </div>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </a>

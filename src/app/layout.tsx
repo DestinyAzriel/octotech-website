@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
-import StatusStrip from "@/components/StatusStrip";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -47,7 +46,6 @@ export default function RootLayout({
       className={`${inter.variable} ${spaceGrotesk.variable} ${ibmPlexMono.variable} h-full scroll-smooth`}
     >
       <body className="min-h-full flex flex-col bg-paper text-slate antialiased">
-        <StatusStrip />
         <Navbar />
         <main className="flex-grow flex flex-col">{children}</main>
         <Footer />
