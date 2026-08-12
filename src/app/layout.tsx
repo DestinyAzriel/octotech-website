@@ -25,12 +25,12 @@ const ibmPlexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   title: "OctoTech Ltd | Custom Web Apps, Mobile Apps & Networks",
-  description: "Growing technology and engineering studio led by Founder Telly Paul (Auckland, NZ) and Technical Lead Destiny Mwafulirwa (Lilongwe, MW). We build high-performance web apps, mobile apps, secure VPN infrastructure, and custom database automation.",
+  description: "Growing technology and engineering studio led by Founder Telly Paul (Auckland, NZ) and Co-Founder & Technical Lead Destiny Mwafulirwa (Lilongwe, MW). We build high-performance web apps, mobile apps, secure VPN infrastructure, and custom database automation.",
   keywords: ["OctoTech", "Software Development", "VPN", "Web Apps", "Mobile Apps", "New Zealand IT", "Malawi IT", "Telly Paul", "Destiny Mwafulirwa"],
   authors: [{ name: "Telly Paul" }, { name: "Destiny Mwafulirwa" }],
   openGraph: {
     title: "OctoTech Ltd | Custom Web Apps, Mobile Apps & Networks",
-    description: "Growing technology and engineering studio led by Founder Telly Paul (Auckland, NZ) and Technical Lead Destiny Mwafulirwa (Lilongwe, MW).",
+    description: "Growing technology and engineering studio led by Founder Telly Paul (Auckland, NZ) and Co-Founder & Technical Lead Destiny Mwafulirwa (Lilongwe, MW).",
     type: "website",
   }
 };

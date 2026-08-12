@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { User, MapPin, Compass, Briefcase, FileCode2, ArrowRight } from 'lucide-react';
+import { MapPin, Briefcase, FileCode2, ArrowRight, Zap, DollarSign, Globe2 } from 'lucide-react';
 import ConversionCTA from '@/components/ConversionCTA';
 
 export default function AboutPage() {
@@ -10,10 +10,61 @@ export default function AboutPage() {
         <div className="max-w-3xl space-y-4">
           <span className="font-mono text-sm tracking-widest text-accent uppercase font-bold">About Us</span>
           <h1 className="font-display text-4xl sm:text-5xl font-bold tracking-tight text-ink">
-            Founder-led execution. Two countries.
+            Your IT Solution Starts Here
           </h1>
           <p className="text-lg sm:text-xl text-slate leading-snug">
-            OctoTech was founded by Telly Paul, working alongside Technical Lead Destiny Mwafulirwa. We take on client work — web apps, mobile apps, infrastructure, automation — and we build our own products alongside it. As the work grows, so will the team.
+            We build to your exact specifications, with global reach and the reliability of a team that ships. Whether you need a new system, a custom build, or strategic IT leadership, you&apos;re in safe hands with Founder Telly Paul (Auckland, New Zealand) and Co-Founder & Technical Lead Destiny Mwafulirwa (Lilongwe, Malawi).
+          </p>
+        </div>
+      </section>
+
+      {/* Why Choose OctoTech Section */}
+      <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-b border-hairline bg-[#FAFAF7]">
+        <div className="space-y-4 mb-12">
+          <span className="font-mono text-sm tracking-widest text-accent uppercase font-bold">Value Proposition</span>
+          <h2 className="font-display text-3xl font-bold text-ink">Why Choose OctoTech</h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="p-6 border border-hairline bg-white space-y-3">
+            <div className="p-2.5 bg-ink/5 border border-hairline w-fit">
+              <Zap className="w-5 h-5 text-accent" />
+            </div>
+            <h3 className="font-display font-bold text-lg text-ink">Speed & Agility</h3>
+            <p className="text-sm text-slate leading-snug">
+              We deliver fast results without bureaucratic delay or agency overhead.
+            </p>
+          </div>
+
+          <div className="p-6 border border-hairline bg-white space-y-3">
+            <div className="p-2.5 bg-ink/5 border border-hairline w-fit">
+              <DollarSign className="w-5 h-5 text-accent" />
+            </div>
+            <h3 className="font-display font-bold text-lg text-ink">Cost-Effectiveness</h3>
+            <p className="text-sm text-slate leading-snug">
+              Premium quality engineering without the premium price tag.
+            </p>
+          </div>
+
+          <div className="p-6 border border-hairline bg-white space-y-3">
+            <div className="p-2.5 bg-ink/5 border border-hairline w-fit">
+              <Globe2 className="w-5 h-5 text-accent" />
+            </div>
+            <h3 className="font-display font-bold text-lg text-ink">Bi-Continental Expertise</h3>
+            <p className="text-sm text-slate leading-snug">
+              A skilled team spanning New Zealand and Malawi, ready to tackle your toughest IT requirements.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Origin Story Section (Placed after Why Choose OctoTech) */}
+      <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-b border-hairline">
+        <div className="max-w-3xl space-y-4">
+          <span className="font-mono text-sm tracking-widest text-accent uppercase font-bold">Our Foundation</span>
+          <h2 className="font-display text-3xl font-bold text-ink">Profit with Purpose</h2>
+          <p className="text-base sm:text-lg text-slate leading-relaxed">
+            OctoTech began in 2018 as a New Zealand export business, built on a simple idea: profit with purpose. That early success funded a bigger ambition — a world-class technology practice. Today that vision spans two continents, building software, systems, and infrastructure for clients everywhere.
           </p>
         </div>
       </section>
@@ -70,7 +121,7 @@ export default function AboutPage() {
               <div className="space-y-1.5">
                 <span className="font-mono text-xs tracking-wider text-accent uppercase font-bold">TECHNICAL LEADERSHIP</span>
                 <h3 className="font-display text-2xl font-bold text-ink">Destiny Mwafulirwa</h3>
-                <span className="font-mono text-sm text-slate font-semibold block">Technical Lead</span>
+                <span className="font-mono text-sm text-slate font-semibold block">Co-Founder & Technical Lead</span>
               </div>
               <div className="p-2.5 bg-ink/5 border border-hairline text-slate">
                 <FileCode2 className="w-6 h-6 text-accent" />
@@ -84,7 +135,7 @@ export default function AboutPage() {
 
             <div className="text-base text-slate space-y-4 leading-snug">
               <p>
-                Destiny serves as Technical Lead, directing system operations, networking architectures, database engines, and secure tunnels behind our products.
+                Destiny serves as Co-Founder & Technical Lead, directing system operations, networking architectures, database engines, and secure tunnels behind our products.
               </p>
               <p>
                 With a track record of developing large-scale systems, Destiny previously designed and deployed a municipal traffic management platform. This real-world experience in high-concurrency traffic routing informs how OctoTech architectures handle data integrity, queuing, and server failovers today.
@@ -149,10 +200,22 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Bottom Contact Bridge */}
-        <div className="mt-12 flex justify-end">
-          <Link href="/contact" className="inline-flex items-center gap-2 text-sm font-mono tracking-wider uppercase text-ink hover:text-accent font-semibold transition-colors">
-            Start a project <ArrowRight className="w-4 h-4" />
+        {/* Bottom Closing Line & Contact Bridge */}
+        <div className="mt-16 p-8 border border-hairline bg-white flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div className="space-y-1">
+            <h3 className="font-display font-bold text-xl text-ink">
+              Reach out today. Let&apos;s build something extraordinary.
+            </h3>
+            <p className="text-sm text-slate">
+              Get in touch directly with our leadership team for fixed-price project scoping.
+            </p>
+          </div>
+          <Link 
+            href="/contact" 
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold uppercase tracking-wider text-ink bg-accent hover:bg-accent/90 border border-ink/10 transition-colors shrink-0"
+          >
+            <span>Start a project</span>
+            <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </section>

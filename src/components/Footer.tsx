@@ -43,7 +43,7 @@ export default function Footer() {
             <span>OctoTech</span>
           </div>
           <p className="text-sm font-mono text-slate max-w-sm leading-snug">
-            Founded in Auckland, NZ & Lilongwe, MW by Founder Telly Paul and Technical Lead Destiny Mwafulirwa. Delivering software platforms, mobile applications, databases, and secure network infrastructure.
+            Founded in Auckland, NZ & Lilongwe, MW by Founder Telly Paul and Co-Founder & Technical Lead Destiny Mwafulirwa. Delivering software platforms, mobile applications, databases, and secure network infrastructure.
           </p>
           <div className="text-xs font-mono font-medium text-slate/85 space-y-1 pt-1.5">
             <p>● Projects typically start at $5,000 NZD</p>

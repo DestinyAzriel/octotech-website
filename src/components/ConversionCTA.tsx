@@ -13,7 +13,7 @@ export default function ConversionCTA() {
             Let&apos;s build your system.
           </h2>
           <p className="text-base sm:text-lg max-w-xl mx-auto leading-snug" style={{ color: '#A0AEC0' }}>
-            Translate your operational bottlenecks into stable, custom software assets. Get a dedicated delivery team — led by Founder Telly Paul and Technical Lead Destiny Mwafulirwa — without agency overhead.
+            Translate your operational bottlenecks into stable, custom software assets. Get a dedicated delivery team — led by Founder Telly Paul and Co-Founder & Technical Lead Destiny Mwafulirwa — without agency overhead.
           </p>
         </div>
 
