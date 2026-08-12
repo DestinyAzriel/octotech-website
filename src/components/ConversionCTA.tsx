@@ -37,7 +37,7 @@ export default function ConversionCTA() {
             <DollarSign className="w-5 h-5 text-accent shrink-0 mt-0.5" />
             <div className="space-y-0.5">
               <h4 className="text-sm font-mono font-bold tracking-tight uppercase">Pricing Policy</h4>
-              <p className="text-sm" style={{ color: '#E2E8F0' }}>Projects start at $5,000 NZD. Fixed-price quotes.</p>
+              <p className="text-sm" style={{ color: '#E2E8F0' }}>Most projects start around $5,000 NZD — smaller enquiries welcome.</p>
             </div>
           </div>
         </div>

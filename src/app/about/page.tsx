@@ -7,7 +7,7 @@ export default function AboutPage() {
     <div className="w-full flex flex-col">
       {/* Page Header */}
       <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-b border-hairline">
-        <div className="max-w-3xl space-y-4">
+        <div className="max-w-4xl space-y-4">
           <span className="font-mono text-sm tracking-widest text-accent uppercase font-bold">About Us</span>
           <h1 className="font-display text-4xl sm:text-5xl font-bold tracking-tight text-ink">
             Your IT Solution Starts Here
@@ -60,7 +60,7 @@ export default function AboutPage() {
 
       {/* Origin Story Section (Placed after Why Choose OctoTech) */}
       <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-b border-hairline">
-        <div className="max-w-3xl space-y-4">
+        <div className="max-w-4xl space-y-4">
           <span className="font-mono text-sm tracking-widest text-accent uppercase font-bold">Our Foundation</span>
           <h2 className="font-display text-3xl font-bold text-ink">Profit with Purpose</h2>
           <p className="text-base sm:text-lg text-slate leading-relaxed">

@@ -46,7 +46,7 @@ export default function Footer() {
             Founded in Auckland, NZ & Lilongwe, MW by Founder Telly Paul and Co-Founder & Technical Lead Destiny Mwafulirwa. Delivering software platforms, mobile applications, databases, and secure network infrastructure.
           </p>
           <div className="text-xs font-mono font-medium text-slate/85 space-y-1 pt-1.5">
-            <p>● Projects typically start at $5,000 NZD</p>
+            <p>● Most projects start around $5,000 NZD — smaller enquiries welcome</p>
             <p>● Fixed-price scope before development</p>
             <p>● We review and reply within 24 hours</p>
           </div>

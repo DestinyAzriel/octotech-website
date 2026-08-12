@@ -282,7 +282,7 @@ export default function ContactPage() {
     <div className="w-full flex flex-col">
       {/* Page Header */}
       <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-b border-hairline">
-        <div className="max-w-3xl space-y-4">
+        <div className="max-w-4xl space-y-4">
           <span className="font-mono text-sm tracking-widest text-accent uppercase font-bold">Start a project</span>
           <h1 className="font-display text-4xl sm:text-5xl font-bold tracking-tight text-ink">
             Tell us what you need.
@@ -301,7 +301,7 @@ export default function ContactPage() {
               2 slots open this quarter
             </span>
             <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-ink/5 border border-hairline rounded-sm">
-              Projects start at $5,000 NZD
+              Most projects start around $5,000 NZD — smaller enquiries welcome
             </span>
           </div>
         </div>
