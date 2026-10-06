@@ -60,12 +60,43 @@ export default function AboutPage() {
 
       {/* Origin Story Section (Placed after Why Choose OctoTech) */}
       <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-b border-hairline">
-        <div className="max-w-4xl space-y-4">
-          <span className="font-mono text-sm tracking-widest text-accent uppercase font-bold">Our Foundation</span>
-          <h2 className="font-display text-3xl font-bold text-ink">Profit with Purpose</h2>
+        <div className="max-w-4xl space-y-6">
+          <div className="space-y-2">
+            <span className="font-mono text-sm tracking-widest text-accent uppercase font-bold">Our Foundation</span>
+            <h2 className="font-display text-3xl font-bold text-ink">Profit with Purpose</h2>
+          </div>
           <p className="text-base sm:text-lg text-slate leading-relaxed">
             OctoTech began in 2018 as a New Zealand export business, built on a simple idea: profit with purpose. That early success funded a bigger ambition — a world-class technology practice. Today that vision spans two continents, building software, systems, and infrastructure for clients everywhere.
           </p>
+
+          {/* Registered and Verified Badge Card */}
+          <div className="p-5 border border-hairline bg-[#FAFAF7] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div className="space-y-1">
+              <span className="text-xs font-mono text-slate/70 uppercase tracking-wider block font-semibold">Corporate Registration & Global Trust</span>
+              <p className="text-sm font-bold text-ink font-mono">
+                OCTOTECH LIMITED &bull; Company Reg #6863136
+              </p>
+              <p className="text-xs text-slate">
+                Verified member of ConnectAmericas (Inter-American Development Bank network for international trade and enterprise partnerships).
+              </p>
+            </div>
+            <a
+              href="https://connectamericas.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 inline-flex items-center gap-2.5 p-2.5 bg-white border border-hairline hover:border-accent transition-colors"
+              title="OCTOTECH LIMITED is verified on ConnectAmericas"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/verifiedbadge.png"
+                alt="ConnectAmericas Verified Company"
+                className="h-7 w-auto object-contain"
+                width={88}
+                height={31}
+              />
+            </a>
+          </div>
         </div>
       </section>
 

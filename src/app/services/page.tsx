@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Laptop, Server, Database, Shield, ArrowRight, Settings, CheckCircle2 } from 'lucide-react';
+import { Laptop, Server, Database, Shield, ArrowRight, CheckCircle2 } from 'lucide-react';
 import ConversionCTA from '@/components/ConversionCTA';
 
 const serviceCategories = [
@@ -76,7 +76,7 @@ export default function ServicesPage() {
       {/* Services Grid */}
       <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {serviceCategories.map((service, index) => {
+          {serviceCategories.map((service) => {
             const Icon = service.icon;
             return (
               <div 

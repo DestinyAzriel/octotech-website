@@ -1,6 +1,6 @@
 'use client';
 
-import { Suspense, useState, useEffect } from 'react';
+import { Suspense, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { ShieldAlert, ArrowUpRight, CheckCircle2, AlertTriangle } from 'lucide-react';
 
@@ -21,23 +21,22 @@ const Github = (props: React.SVGProps<SVGSVGElement>) => (
 
 function ContactFormContent() {
   const searchParams = useSearchParams();
+  const reasonParam = searchParams.get('reason') || 'general';
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    reason: 'general',
+    reason: reasonParam,
     budget: 'mid',
     details: '',
   });
+  const [prevReasonParam, setPrevReasonParam] = useState(reasonParam);
+  if (reasonParam !== prevReasonParam) {
+    setPrevReasonParam(reasonParam);
+    setFormData((prev) => ({ ...prev, reason: reasonParam }));
+  }
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
-
-  useEffect(() => {
-    const reasonParam = searchParams.get('reason');
-    if (reasonParam) {
-      setFormData((prev) => ({ ...prev, reason: reasonParam }));
-    }
-  }, [searchParams]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -234,6 +233,27 @@ function ContactFormContent() {
           </p>
 
           <div className="space-y-3 pt-2">
+            <a
+              href="https://connectamericas.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-between p-3.5 border border-hairline bg-white hover:border-accent transition-colors text-sm text-slate hover:text-ink focus-ring"
+              title="OCTOTECH LIMITED (6863136) is verified on ConnectAmericas"
+            >
+              <div className="flex items-center gap-2.5">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/verifiedbadge.png"
+                  alt="ConnectAmericas Verified Company"
+                  className="h-5 w-auto object-contain shrink-0"
+                  width={88}
+                  height={31}
+                />
+                <span className="font-mono text-xs">OCTOTECH LIMITED (6863136)</span>
+              </div>
+              <ArrowUpRight className="w-3.5 h-3.5 shrink-0" />
+            </a>
+
             <a
               href="https://github.com/DestinyAzriel"
               target="_blank"

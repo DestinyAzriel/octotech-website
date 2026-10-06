@@ -4,11 +4,9 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 export default function Footer() {
-  const [mounted, setMounted] = useState(false);
   const [times, setTimes] = useState({ lilongwe: '', auckland: '' });
 
   useEffect(() => {
-    setMounted(true);
     const updateTimes = () => {
       try {
         const timeFormatter = (timeZone: string) => {
@@ -39,8 +37,9 @@ export default function Footer() {
     <footer className="w-full bg-[#FAFAF7] border-t border-hairline py-12 px-4 sm:px-6 lg:px-8 mt-auto">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
         <div className="space-y-3">
-          <div className="flex items-center gap-1.5 font-display text-base font-bold tracking-tight text-ink">
-            <span>OctoTech</span>
+          <div className="flex items-center gap-2 font-display text-base font-bold tracking-tight text-ink">
+            <span>OCTOTECH LIMITED</span>
+            <span className="text-xs font-mono font-normal text-slate/70">(Co. #6863136)</span>
           </div>
           <p className="text-sm font-mono text-slate max-w-sm leading-snug">
             Founded in Auckland, NZ & Lilongwe, MW by Founder Telly Paul and Co-Founder & Technical Lead Destiny Mwafulirwa. Delivering software platforms, mobile applications, databases, and secure network infrastructure.
@@ -76,7 +75,26 @@ export default function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto border-t border-hairline mt-8 pt-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-[11px] font-mono text-slate/70">
-        <span>© {new Date().getFullYear()} OctoTech Ltd. All rights reserved.</span>
+        <div className="flex flex-wrap items-center gap-3">
+          <span>© {new Date().getFullYear()} OCTOTECH LIMITED. All rights reserved.</span>
+          <a
+            href="https://connectamericas.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 hover:opacity-80 transition-opacity bg-white border border-hairline px-2 py-1 rounded-xs"
+            title="OCTOTECH LIMITED (6863136) is verified on ConnectAmericas (Inter-American Development Bank)"
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/verifiedbadge.png"
+              alt="ConnectAmericas Verified Company"
+              className="h-5 w-auto object-contain"
+              width={88}
+              height={31}
+            />
+            <span className="text-[10px] text-slate font-medium hidden sm:inline">ConnectAmericas Verified</span>
+          </a>
+        </div>
 
         <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-slate/70">
           <div className="flex items-center gap-1.5">
@@ -85,7 +103,7 @@ export default function Footer() {
               <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-accent"></span>
             </span>
             <span>Auckland, NZ</span>
-            <span className="text-slate/90 font-medium">{mounted ? `${times.auckland} NZST/NZDT` : '--:--:--'}</span>
+            <span className="text-slate/90 font-medium">{times.auckland ? `${times.auckland} NZST/NZDT` : '--:--:--'}</span>
           </div>
 
           <span className="text-hairline">|</span>
@@ -96,7 +114,7 @@ export default function Footer() {
               <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-accent"></span>
             </span>
             <span>Lilongwe, MW</span>
-            <span className="text-slate/90 font-medium">{mounted ? `${times.lilongwe} CAT` : '--:--:--'}</span>
+            <span className="text-slate/90 font-medium">{times.lilongwe ? `${times.lilongwe} CAT` : '--:--:--'}</span>
           </div>
         </div>
       </div>

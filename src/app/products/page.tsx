@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Shield, CreditCard, Send, Lock, Server, Terminal, Smartphone, Sparkles, CheckCircle } from 'lucide-react';
+import { CreditCard, Lock, Server, Smartphone, Sparkles, CheckCircle } from 'lucide-react';
 import ConversionCTA from '@/components/ConversionCTA';
 
 export default function ProductsPage() {

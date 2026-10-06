@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight, Server, Shield, Laptop, CheckCircle, Database, Calendar, Clock, DollarSign, MessageSquare, FileText, Hammer, Rocket } from 'lucide-react';
+import { ArrowRight, Server, Shield, Laptop, CheckCircle, Database, MessageSquare, FileText, Hammer, Rocket } from 'lucide-react';
 import ConversionCTA from '@/components/ConversionCTA';
 
 export default function Home() {
@@ -28,7 +28,7 @@ export default function Home() {
               web, mobile, infrastructure, automation — and we build our own products end to end.
             </p>
 
-            <div className="flex flex-wrap gap-4 pt-2">
+            <div className="flex flex-wrap items-center gap-4 pt-2">
               <Link
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold uppercase tracking-wider text-ink bg-accent hover:bg-accent/90 border border-ink/10 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
@@ -41,6 +41,23 @@ export default function Home() {
               >
                 View Solutions
               </Link>
+              <a
+                href="https://connectamericas.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-3 py-2 bg-white border border-hairline hover:border-accent transition-colors"
+                title="OCTOTECH LIMITED (6863136) is verified on ConnectAmericas"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/verifiedbadge.png"
+                  alt="ConnectAmericas Verified Company"
+                  className="h-5 w-auto object-contain"
+                  width={88}
+                  height={31}
+                />
+                <span className="text-xs font-mono text-slate font-medium hidden sm:inline">Verified Enterprise</span>
+              </a>
             </div>
           </div>
 
